@@ -1,8 +1,29 @@
 HOME = os.getenv("HOME")
 
--- WhiteSpace
-vim.o.autoindent = true
-vim.o.smartindent = true
-vim.o.tabstop = 2
-vim.o.shiftwidth = 2
-vim.o.expandtab =  true
+local options = {
+  -- WhiteSpace
+  autoindent = true,
+  smartindent = true,
+  tabstop = 2,
+  shiftwidth = 2,
+  expandtab =  true, 
+
+  clipboard = 'unnamedplus',
+  backup = false,
+  swapfile = false,
+
+  -- Display
+  number = true,
+  cursorline = true,
+  splitbelow = true, -- force horizontal split down to current
+  splitright = true,
+
+  -- Search
+  ignorecase = true,
+  relativenumber = false,
+}
+for k,v in pairs(options) do 
+  vim.o[k] = v
+end
+
+
