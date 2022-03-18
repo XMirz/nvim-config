@@ -17,7 +17,7 @@ local options = {
   cursorline = true,
   splitbelow = true, -- force horizontal split down to current
   splitright = true,
-
+  showtabline = 2,
   -- Search
   ignorecase = true,
   relativenumber = false,

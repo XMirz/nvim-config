@@ -46,7 +46,7 @@ return packer.startup(function(use)
   use 'vim-airline/vim-airline' -- Bottom status bar
   use 'tpope/vim-vinegar' 
   use 'tpope/vim-fugitive' -- Github things
-
+  use 'folke/tokyonight.nvim' -- TokyoNight Themes 
   -- Automatically setup configuration after closing packer.nvim
   if PACKER_BOOTSTRAP then
     require('packer').sync()
