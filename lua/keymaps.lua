@@ -15,7 +15,14 @@ vim.g.localmapleader = " "
 --   term_mode = "t",
 --   command_mode = "c",
 
-keymap("","<C-b>", ":Lexplore<CR>", opts)
+-- Navigate window
+keymap("", "<C-h>", "<C-w>h", opts)
+keymap("", "<C-j>", "<C-w>j", opts)
+keymap("", "<C-k>", "<C-w>k", opts)
+keymap("", "<C-l>", "<C-w>l", opts)
+
+
+keymap("","<C-b>", ":Lexplore 25<CR>", opts)
 keymap("i","<C-b>", "<ESC>:Lexplore 25<CR>", opts)
 
 -- Move text
