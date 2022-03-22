@@ -74,6 +74,11 @@ _G.packer_plugins = {
     path = "/home/xmirz/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["Telescope-media-files.nvim"] = {
+    loaded = true,
+    path = "/home/xmirz/.local/share/nvim/site/pack/packer/start/Telescope-media-files.nvim",
+    url = "https://github.com/nvim-telescope/Telescope-media-files.nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/xmirz/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -128,6 +133,21 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/xmirz/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
+  },
+  ["plenary.nvim"] = {
+    loaded = true,
+    path = "/home/xmirz/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+    url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["popup.nvim"] = {
+    loaded = true,
+    path = "/home/xmirz/.local/share/nvim/site/pack/packer/start/popup.nvim",
+    url = "https://github.com/nvim-lua/popup.nvim"
+  },
+  ["telescope.nvim"] = {
+    loaded = true,
+    path = "/home/xmirz/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   ["tokyonight.nvim"] = {
     loaded = true,

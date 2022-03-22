@@ -43,11 +43,16 @@ packer.init {
 return packer.startup(function(use)
   use 'wbthomason/packer.nvim'
 
+  -- often used as dependency
+  use 'nvim-lua/plenary.nvim'
+  use 'nvim-lua/popup.nvim'
+  
   use 'vim-airline/vim-airline' -- Bottom status bar
   use 'tpope/vim-vinegar' 
   use 'tpope/vim-fugitive' -- Github things
   use 'folke/tokyonight.nvim' -- TokyoNight Themes 
   
+
   -- Completion
   use 'hrsh7th/cmp-path'  -- Main completion 
   use 'hrsh7th/cmp-cmdline'
@@ -65,6 +70,12 @@ return packer.startup(function(use)
   use 'neovim/nvim-lspconfig'
   use 'williamboman/nvim-lsp-installer' -- builtin lsp wrapper
   
+
+  -- Telescope
+  use 'nvim-telescope/telescope.nvim'
+  use 'nvim-telescope/Telescope-media-files.nvim'
+
+
   -- Automatically setup configuration after closing packer.nvim
   if PACKER_BOOTSTRAP then
     require('packer').sync()
