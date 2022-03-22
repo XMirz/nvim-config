@@ -69,7 +69,13 @@ return packer.startup(function(use)
   use 'hrsh7th/cmp-nvim-lsp'
   use 'neovim/nvim-lspconfig'
   use 'williamboman/nvim-lsp-installer' -- builtin lsp wrapper
-  
+
+  -- Treesitter
+  use {
+    "nvim-treesitter/nvim-treesitter",
+    run = ":TSUpdate",
+  }
+  use 'p00f/nvim-ts-rainbow' --raibow brackets
 
   -- Telescope
   use 'nvim-telescope/telescope.nvim'
