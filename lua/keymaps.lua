@@ -25,15 +25,13 @@ keymap("n", "<C-Down>", "<C-w>j", opts)
 keymap("n", "<C-Up>", "<C-w>k", opts)
 keymap("n", "<C-Right>", "<C-w>l", opts)
 
-
 -- NvimTree
-keymap("","<Leader>e", "<ESC>:NvimTreeToggle<CR>", opts)
-keymap("i","<Leader>e", "<ESC>:NvimTreeToggle<CR>", opts)
+keymap("", "<Leader>e", "<ESC>:NvimTreeToggle<CR>", opts)
+keymap("i", "<Leader>e", "<ESC>:NvimTreeToggle<CR>", opts)
 
 -- window
 keymap("", "<Leader>cc", "<ESC>:q<CR>", opts)
 keymap("i", "<Leader>cc", "<ESC>:q<CR>", opts)
-
 
 -- Resize window
 keymap("", "<C-A-Up>", ":resize +2<CR>", opts)
@@ -41,18 +39,16 @@ keymap("", "<C-A-Down>", ":resize -2<CR>", opts)
 keymap("", "<C-A-Left>", ":vertical resize -2<CR>", opts)
 keymap("", "<C-A-Right>", ":vertical resize +2<CR>", opts)
 
-
 -- Buffer navigation
-keymap("","<S-Right>", ":bnext<CR>", opts)
-keymap("","<S-Left>", ":bprevious<CR>", opts)
+keymap("", "<S-Right>", ":bnext<CR>", opts)
+keymap("", "<S-Left>", ":bprevious<CR>", opts)
 
 -- Indentation
-keymap("v",">", ">gv", opts)
-keymap("v","<", "<gv", opts)
+keymap("v", ">", ">gv", opts)
+keymap("v", "<", "<gv", opts)
 
 -- Paste most intended yank
 keymap("v", "p", '"_dP', opts)
-
 
 -- Move text
 keymap("", "<A-Up>", "<ESC>:m .-2<CR>==", opts)
@@ -65,18 +61,18 @@ keymap("", "<A-S-Down>", ":copy .<CR>", opts)
 keymap("x", "<A-S-Down>", ":copy '><CR>", opts)
 keymap("i", "<A-S-Down>", "<ESC>:copy .<CR>", opts)
 
+keymap("", "<Leader>f", ":lua vim.lsp.buf.formatting()<CR>", opts) -- Format files
+keymap("i", "<Leader>f", ":lua vim.lsp.buf.formatting()<CR>", opts) -- Format files
 
 -- Telescope
-keymap("", "<Leader>f", "<ESC>:Telescope find_files<CR>", opts)
-keymap("i", "<Leader>f", "<ESC>:Telescope find_files<CR>", opts)
-
+keymap("", "<Leader>p", "<ESC>:Telescope find_files<CR>", opts)
+keymap("i", "<Leader>p", "<ESC>:Telescope find_files<CR>", opts)
 
 -- Git related
 keymap("", "<Leader>gs", "<ESC>:Git status<CR>", opts)
 keymap("", "<Leader>gd", "<ESC>:Git diff<CR>", opts)
 
-
 -- Comment
-keymap("n", "<C-_>", "<CMD>lua require(\"Comment.api\").toggle_current_linewise_op()<CR>", opts)
-keymap("i", "<C-_>", "<CMD>lua require(\"Comment.api\").toggle_current_linewise_op()<CR>", opts)
-keymap("v", "<C-_>", "<ESC><CMD>lua require(\"Comment.api\").locked.toggle_linewise_op(vim.fn.visualmode())<CR>", opts)
+keymap("n", "<C-_>", '<CMD>lua require("Comment.api").toggle_current_linewise_op()<CR>', opts)
+keymap("i", "<C-_>", '<CMD>lua require("Comment.api").toggle_current_linewise_op()<CR>', opts)
+keymap("v", "<C-_>", '<ESC><CMD>lua require("Comment.api").locked.toggle_linewise_op(vim.fn.visualmode())<CR>', opts)

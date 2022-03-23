@@ -8,3 +8,4 @@ require("treesitter")
 require("autopairs")
 require("comment")
 require("nvimtree")
+require("buffer-line") -- file name should different from plugin name

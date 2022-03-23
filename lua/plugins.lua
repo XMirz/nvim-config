@@ -48,7 +48,6 @@ return packer.startup(function(use)
   use 'nvim-lua/popup.nvim'
   
   use 'vim-airline/vim-airline' -- Bottom status bar
-  use 'tpope/vim-vinegar' 
   use 'tpope/vim-fugitive' -- Github things
   use 'folke/tokyonight.nvim' -- TokyoNight Themes 
 
@@ -68,6 +67,9 @@ return packer.startup(function(use)
   use 'hrsh7th/cmp-nvim-lsp'
   use 'neovim/nvim-lspconfig'
   use 'williamboman/nvim-lsp-installer' -- builtin lsp wrapper
+  
+  use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
+
 
   -- Treesitter
   use {
@@ -94,6 +96,8 @@ return packer.startup(function(use)
   -- Buffer line
   use "akinsho/bufferline.nvim"
   use "moll/vim-bbye"
+
+
   -- use "lewis6991/gitsigns.nvim" -- gitsigns
   -- Automatically setup configuration after closing packer.nvim
   if PACKER_BOOTSTRAP then
