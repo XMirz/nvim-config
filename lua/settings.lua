@@ -7,6 +7,8 @@ local options = {
   tabstop = 2,
   shiftwidth = 2,
   expandtab =  true, 
+  
+  timeoutlen=500,
 
   clipboard = 'unnamedplus',
   backup = false,

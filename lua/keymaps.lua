@@ -1,8 +1,8 @@
-local opts = { noremap = true, silent = true}
+local opts = { noremap = true, silent = true }
 
 local termOpts =  {silent = true}
 
-  local keymap = vim.api.nvim_set_keymap
+local keymap = vim.api.nvim_set_keymap
 
 vim.g.mapleader = " "
 vim.g.localmapleader = " "
@@ -27,14 +27,15 @@ keymap("n", "<C-Right>", "<C-w>l", opts)
 
 
 -- NvimTree
--- keymap("","<C-b>", ":Lexplore 25<CR>", opts)
--- keymap("i","<C-b>", "<ESC>:Lexplore 25<CR>", opts)
-keymap("","<C-b>", "<ESC>:NvimTreeToggle<CR>", opts)
 keymap("","<Leader>e", "<ESC>:NvimTreeToggle<CR>", opts)
 keymap("i","<Leader>e", "<ESC>:NvimTreeToggle<CR>", opts)
 
+-- window
+keymap("", "<Leader>cc", "<ESC>:q<CR>", opts)
+keymap("i", "<Leader>cc", "<ESC>:q<CR>", opts)
 
--- Resize windo
+
+-- Resize window
 keymap("", "<C-A-Up>", ":resize +2<CR>", opts)
 keymap("", "<C-A-Down>", ":resize -2<CR>", opts)
 keymap("", "<C-A-Left>", ":vertical resize -2<CR>", opts)
@@ -45,7 +46,6 @@ keymap("", "<C-A-Right>", ":vertical resize +2<CR>", opts)
 keymap("","<S-Right>", ":bnext<CR>", opts)
 keymap("","<S-Left>", ":bprevious<CR>", opts)
 
--- Visual Modes
 -- Indentation
 keymap("v",">", ">gv", opts)
 keymap("v","<", "<gv", opts)
@@ -63,6 +63,18 @@ keymap("x", "<A-Down>", ":move '>+1<CR>gv-gv", opts)
 -- Copy text
 keymap("", "<A-S-Down>", ":copy .<CR>", opts)
 keymap("x", "<A-S-Down>", ":copy '><CR>", opts)
+keymap("i", "<A-S-Down>", "<ESC>:copy .<CR>", opts)
+
+
+-- Telescope
+keymap("", "<Leader>f", "<ESC>:Telescope find_files<CR>", opts)
+keymap("i", "<Leader>f", "<ESC>:Telescope find_files<CR>", opts)
+
+
+-- Git related
+keymap("", "<Leader>gs", "<ESC>:Git status<CR>", opts)
+keymap("", "<Leader>gd", "<ESC>:Git diff<CR>", opts)
+
 
 -- Comment
 keymap("n", "<C-_>", "<CMD>lua require(\"Comment.api\").toggle_current_linewise_op()<CR>", opts)
