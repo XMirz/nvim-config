@@ -90,7 +90,10 @@ return packer.startup(function(use)
   -- Nvim-tree 
   use 'kyazdani42/nvim-tree.lua'
   use 'kyazdani42/nvim-web-devicons' -- optional, for file icon
-
+  
+  -- Buffer line
+  use "akinsho/bufferline.nvim"
+  use "moll/vim-bbye"
   -- use "lewis6991/gitsigns.nvim" -- gitsigns
   -- Automatically setup configuration after closing packer.nvim
   if PACKER_BOOTSTRAP then
