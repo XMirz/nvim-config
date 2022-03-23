@@ -8,3 +8,4 @@
   - pdftoppm (optional, for pdf preview support. Available in the AUR as poppler package.)
   - epub-thumbnailer (optional, for epub preview support.)
   - fontpreview (optional, for font preview support)
+  - Null-Ls need some formatter, such as prettier, stylua, etc
