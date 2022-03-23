@@ -4,8 +4,8 @@ local termOpts =  {silent = true}
 
   local keymap = vim.api.nvim_set_keymap
 
-vim.g.mapleader = " "
-vim.g.localmapleader = " "
+vim.g.mapleader = ";"
+vim.g.localmapleader = ";"
 
 -- Modes
 --   normal_mode = "n",
@@ -54,4 +54,6 @@ keymap("v", "p", '"_dP', opts)
 keymap("x", "<A-Up>", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-Down>", ":move '>+1<CR>gv-gv", opts)
 
-
+-- Comment
+keymap("n", "<C-_>", "<CMD>lua require(\"Comment.api\").toggle_current_linewise_op()<CR>", opts)
+keymap("v", "<C-_>", "<ESC><CMD>lua require(\"Comment.api\").locked.toggle_linewise_op(vim.fn.visualmode())<CR>", opts)

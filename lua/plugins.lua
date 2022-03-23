@@ -51,7 +51,6 @@ return packer.startup(function(use)
   use 'tpope/vim-vinegar' 
   use 'tpope/vim-fugitive' -- Github things
   use 'folke/tokyonight.nvim' -- TokyoNight Themes 
-  
 
   -- Completion
   use 'hrsh7th/cmp-path'  -- Main completion 
@@ -76,11 +75,16 @@ return packer.startup(function(use)
     run = ":TSUpdate",
   }
   use 'p00f/nvim-ts-rainbow' --raibow brackets
+  use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
+
 
   -- Telescope
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/Telescope-media-files.nvim'
 
+  -- Commenting
+  use 'numToStr/Comment.nvim' -- Comment support
+  use 'JoosepAlviste/nvim-ts-context-commentstring'
 
   -- Automatically setup configuration after closing packer.nvim
   if PACKER_BOOTSTRAP then

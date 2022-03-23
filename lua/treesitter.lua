@@ -21,4 +21,11 @@ configs.setup {
     -- colors = {}, -- table of hex strings
     -- termcolors = {} -- table of colour name strings
   },
+  autopairs = {
+		enable = true,
+	},
+  context_commentstring = {
+    enable = true,
+    enable_autocmd = false,
+  },
 }
