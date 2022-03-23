@@ -110,3 +110,10 @@ nvim_tree.setup {
     tree_width = 30,
   },
 }
+
+-- Set bg color to follow theme
+vim.cmd [[
+  autocmd VimEnter * highlight NvimTreeNormal guibg=Normal
+  autocmd VimEnter * highlight NvimTreeNormalNC guibg=Normal
+]]
+
