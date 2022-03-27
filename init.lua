@@ -1,3 +1,4 @@
+require("lua-line")
 require("plugins")
 require("settings")
 require("keymaps")

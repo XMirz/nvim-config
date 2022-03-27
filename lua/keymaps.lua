@@ -84,16 +84,21 @@ keymap("n", "<C-_>", '<CMD>lua require("Comment.api").toggle_current_linewise_op
 keymap("i", "<C-_>", '<CMD>lua require("Comment.api").toggle_current_linewise_op()<CR>', opts)
 keymap("v", "<C-_>", '<ESC><CMD>lua require("Comment.api").locked.toggle_linewise_op(vim.fn.visualmode())<CR>', opts)
 
+
+-- Colorscheme / Themes
+keymap("n", "<Leader>tt", "<ESC>:lua toggle_transparent()<CR>", opts) -- toggle tokyonihgt transparent
+
+
 -- Buffer
 
-keymap( "n", "<Leader>ld", "<ESC>:lua vim.lsp.buf.declaration()<CR>", opts)
-keymap( "n", "<Leader>li", "<ESC>:lua vim.lsp.buf.implementation()<CR>", opts)
-keymap( "n", "<Leader>lr", "<ESC>:lua vim.lsp.buf.references()<CR>", opts)
-keymap( "n", "<Leader>lh", "<ESC>:lua vim.lsp.buf.hover()<CR>", opts)
-keymap( "n", "<Leader>rn", "<ESC>:lua vim.lsp.buf.rename()<CR>", opts)
-local M = {}
-M.lsp_keymaps = function()
-print('Loading bufkeymap')
+-- local M = {}
+function _G.set_lsp_keymap()
+	print("Loading bufkeymap")
+	keymap("n", "<Leader>ld", "<ESC>:lua vim.lsp.buf.declaration()<CR>", opts)
+	keymap("n", "<Leader>li", "<ESC>:lua vim.lsp.buf.implementation()<CR>", opts)
+	keymap("n", "<Leader>lr", "<ESC>:lua vim.lsp.buf.references()<CR>", opts)
+	keymap("n", "<Leader>lh", "<ESC>:lua vim.lsp.buf.hover()<CR>", opts)
+	keymap("n", "<Leader>rn", "<ESC>:lua vim.lsp.buf.rename()<CR>", opts)
 	-- vim.api.nvim_buf_set_keymap(bufnr, "n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
 	-- vim.api.nvim_buf_set_keymap(bufnr, "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
 	-- vim.api.nvim_buf_set_keymap(bufnr, "n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
@@ -116,4 +121,6 @@ print('Loading bufkeymap')
 	-- vim.cmd [[ command! Format execute 'lua vim.lsp.buf.formatting()' ]]
 end
 
-return M
+-- return M
+
+vim.cmd("autocmd! VimEnter * lua set_lsp_keymap() ")

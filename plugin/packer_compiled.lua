@@ -129,6 +129,11 @@ _G.packer_plugins = {
     path = "/home/xmirz/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/home/xmirz/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
   ["null-ls.nvim"] = {
     loaded = true,
     path = "/home/xmirz/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
@@ -208,11 +213,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/xmirz/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
     url = "https://github.com/folke/tokyonight.nvim"
-  },
-  ["vim-airline"] = {
-    loaded = true,
-    path = "/home/xmirz/.local/share/nvim/site/pack/packer/start/vim-airline",
-    url = "https://github.com/vim-airline/vim-airline"
   },
   ["vim-bbye"] = {
     loaded = true,
